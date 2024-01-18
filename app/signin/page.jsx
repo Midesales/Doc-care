@@ -58,8 +58,8 @@ export default function Home() {
         <div className="bg-[#3AABA9] border border-[#3AABA9] text-white flex flex-col justify-center items-center gap-3 px-8 ">
           <p className="text-2xl font-semibold">Welcome back!</p>
           <div className="text-xs text-center">
-            <p>Enter your login personal details </p>
-            <p> to continue book an appointment.</p>
+            <p>Enter your login details to continue </p>
+            <p> to book an appointment.</p>
           </div>
 
           <p className="text-xs py-3">Don’t have an account?</p>
