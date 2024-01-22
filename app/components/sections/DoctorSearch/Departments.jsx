@@ -17,7 +17,7 @@ const Departments = () => {
   ];
   return (
     <div className="bg-[#fff] py-[15vh]">
-      <h2 className="text-center text-[#000] text-[72px] font-bold">
+      <h2 className="text-center text-[#000] text-[70px] font-bold">
         Departments
       </h2>
 

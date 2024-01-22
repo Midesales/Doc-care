@@ -16,7 +16,7 @@ const Doctors = () => {
   ];
   return (
     <div className="bg-[#cdf2f1] py-[15vh]">
-      <h2 className="text-center text-[#000] text-[72px] font-bold">
+      <h2 className="text-center text-[#000] text-[70px] font-bold">
         Our Doctors
       </h2>
 

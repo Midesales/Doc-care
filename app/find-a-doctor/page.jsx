@@ -4,6 +4,7 @@ import Image from "next/image";
 import Woman from "../images/doctor-01.png";
 import Doctors from "../components/sections/DoctorSearch/Doctors";
 import Departments from "../components/sections/DoctorSearch/Departments";
+import Footer from "../components/defaults/Footer";
 
 const DoctorSearch = () => {
   return (
@@ -32,6 +33,7 @@ const DoctorSearch = () => {
 
       <Doctors />
       <Departments />
+      <Footer />
     </div>
   );
 };
