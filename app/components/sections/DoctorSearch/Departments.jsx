@@ -17,11 +17,11 @@ const Departments = () => {
   ];
   return (
     <div className="bg-[#fff] py-[15vh]">
-      <h2 className="text-center text-[#000] text-[70px] font-bold">
+      <h2 className="text-center text-[#000] lg:text-[70px] text-[40px] font-bold">
         Departments
       </h2>
 
-      <div className="grid grid-cols-3 gap-10 mt-10 items-center w-[80vw] mx-auto">
+      <div className="grid lg:grid-cols-3 grid-cols-1 gap-x-10 gap-y-10 mt-10 items-center lg:w-[80vw] w-[90vw] mx-auto">
         {departments.map((department) => (
           <div
             key={department.id}

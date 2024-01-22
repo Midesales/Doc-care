@@ -4,9 +4,9 @@ import Logo from "../../images/logo.png";
 
 const Header = () => {
   return (
-    <header className="flex justify-between items-center text-[#000] pt-6 px-16 pb-2 bg-white">
+    <header className="flex justify-between items-center text-[#000] lg:pt-6 pt-3 lg:px-16 px-4 pb-2 bg-white">
       <Image src={Logo} className="w-[4rem]" alt="img" />
-      <div className="space-x-16">
+      <div className="space-x-16 lg:flex hidden">
         <Link href="/" className="hover:text-[#3aaba9] hover:font-bold">Home</Link>
         <Link href="/find-a-doctor" className="hover:text-[#3aaba9] hover:font-bold">Find a Doctor</Link>
         <Link href="/" className="hover:text-[#3aaba9] hover:font-bold">About Us</Link>
