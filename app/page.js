@@ -3,41 +3,42 @@ import Image from "next/image";
 import Man from "./images/boy.png";
 import Vector from "./images/Vector.png";
 import { useRouter } from "next/navigation";
-import Header from "./component/header";
+
+import Header from "./components/defaults/Header";
+
+
 import doctor1 from "./images/doctor1.png";
 import doctor2 from "./images/doctor2.png";
 import doctor3 from "./images/doctor3.png";
 import arrow from "./images/arrow.png";
 import unsplash from './images/unsplash.png'
 
+
 export default function Home() {
   const router = useRouter();
   return (
     <main className="  min-h-screen ">
       <Header />
-      <div className="bg-[#3AABA9] flex flex-col">
-        <div className="flex justify-evenly items-center">
-          <div className="text-white text-center pt-8 pb-28 flex flex-col ">
-            <div className=" text-6xl font-bold">
-              <p className="pb-2">Book Your Doctor</p>
-              <p className="pb-2">Appointment</p>
-              <p className="pb-10">Online</p>
-            </div>
-            <p className="">
-              A Healthier Tomorrow Starts Today: Schedule Your Appointment!{" "}
-            </p>
-            <p>Your Wellness, Our Expertise: Set Up Your Appointment Today.</p>
-            <div className="flex gap-10 pt-6 items-center justify-center text-lg">
-              <button
-                onClick={() => router.push("/signin")}
-                className="border rounded-xl bg-white text-black px-5 py-2"
-              >
-                Book An Appointment
-              </button>
 
-              <button className="border-2 rounded-xl bg-[#3AABA9] text-white px-5 py-2 flex items-center gap-2">
-                <Image src={Vector} alt="vector" className="w-4"></Image>
-                Call Now
+      <div className="bg-[#3AABA9] flex justify-evenly items-center">
+        <div className="text-white text-center pt-8 pb-28 flex flex-col ">
+          <div className=" text-6xl font-bold">
+            <p className="pb-2">Book Your Doctor</p>
+            <p className="pb-2">Appointment</p>
+            <p className="pb-10">Online</p>
+          </div>
+          <p className="">
+            A Healthier Tomorrow Starts Today: Schedule Your Appointment!{" "}
+          </p>
+          <p>Your Wellness, Our Expertise: Set Up Your Appointment Today.</p>
+          <div className="flex gap-10 pt-6 items-center justify-center text-lg">
+            <button onClick={() => router.push('/signin')} className="border rounded-xl bg-white text-black px-5 py-2">Book An Appointment</button>
+            
+            <button className="border-2 rounded-xl bg-[#3AABA9] text-white px-5 py-2 flex items-center gap-2">
+              <Image src={Vector} className="w-4" alt="image" />
+              Call Now
+
+
               </button>
             </div>
           </div>
@@ -68,6 +69,10 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <div>
+          <Image src={Man} className="w-[500px]" alt="image" />
+
         <div className="px-36 font-semibold">
           <h2 className="text-3xl font-bold text-center pt-12">
             How It Works!
@@ -97,6 +102,7 @@ export default function Home() {
               </p>
             </div>
           </div>
+
         </div>
         
       </div>
