@@ -12,7 +12,7 @@ const DoctorSearch = () => {
       <Header />
       <div className="bg-[#3aaba9] lg:px-16 px-4 flex lg:flex-row flex-col justify-between">
         <div className="pt-[15vh] lg:w-[50%]">
-          <h2 className="lg:text-[70px] text-[40px] font-semibold capitalize">
+          <h2 className="lg:text-[70px] text-[40px] font-semibold capitalize text-white">
             Find available doctor for different ailment.
           </h2>
           <p className="text-[20px] pt-6">

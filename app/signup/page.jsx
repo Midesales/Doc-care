@@ -35,7 +35,7 @@ export default function Signup() {
   
       const res = await createUserWithEmailAndPassword(email, password)
       console.log(res)
-      router.push("/");
+      router.push("/find-a-doctor");
       setEmail('');
       setName('')
       setPassword('')

@@ -5,6 +5,7 @@ import Vector from "./images/Vector.png";
 import { useRouter } from "next/navigation";
 
 import Header from "./components/defaults/Header";
+import Footer from "./components/defaults/Footer";
 
 
 import doctor1 from "./images/doctor1.png";
@@ -46,7 +47,7 @@ export default function Home() {
             <Image src={Man} alt="pop" className="w-[500px]"></Image>
           </div>
         </div>
-      </div>
+      
 
       <div>
         <div className="flex justify-center items-center gap-4 -mt-10">
@@ -71,7 +72,7 @@ export default function Home() {
         </div>
 
         <div>
-          <Image src={Man} className="w-[500px]" alt="image" />
+          
 
         <div className="px-36 font-semibold">
           <h2 className="text-3xl font-bold text-center pt-12">
@@ -106,7 +107,7 @@ export default function Home() {
         </div>
         
       </div>
-      <div className="flex">
+      <div className="flex justify-center py-10">
           <Image src={unsplash} alt="man-two" />
           <div>
             <h3>About Us</h3>
@@ -118,6 +119,9 @@ export default function Home() {
             </p>
           </div>
         </div>
+        </div>
+
+        <Footer />
     </main>
   );
 }

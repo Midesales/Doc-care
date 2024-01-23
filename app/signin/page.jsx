@@ -33,7 +33,7 @@ export default function Signin() {
   
       const res = await SignInWithEmailAndPassword(email, password)
       console.log(res)
-      router.push("/");
+      router.push("/find-a-doctor");
       setEmail('');
       setPassword('')
     } catch (error) {
