@@ -79,7 +79,7 @@ export default function Home() {
 
         <div>
           <div className="px-36 font-semibold">
-            <h2 className="text-3xl font-bold text-center pt-12">
+            <h2 className="text-sm lg:text-3xl font-bold text-center pt-12">
               How It Works!
             </h2>
             <div className="block lg:flex justify-center items-center">
@@ -146,7 +146,7 @@ export default function Home() {
             <div className="py-4">
               <Link
                 href="/signin"
-                className="border rounded-xl text-white bg-[#3AABA9] px-4 py-3"
+                className="hidden lg:flex border rounded-xl text-white bg-[#3AABA9] px-4 py-3"
               >
                 Book An Appointment
               </Link>
