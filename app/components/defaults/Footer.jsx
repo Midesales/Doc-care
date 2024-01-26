@@ -1,6 +1,6 @@
 import React from "react";
 import { Email, Instagram, LinkedIn, Location, Phone } from "../svgs/Icons";
-import twitter from "../../images/twitter.png";
+import twitter from "@/app/_images/twitter.png";
 import Link from "next/link";
 import Image from "next/image";
 

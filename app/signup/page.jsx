@@ -2,13 +2,13 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Logo from "../images/logo.png";
-import Apple from "../images/apple.png";
-import Google from "../images/google.png";
-import Facebook from "../images/facebook.png";
+import Logo from "@/app/_images/logo.png";
+import Apple from "@/app/_images/apple.png";
+import Google from "@/app/_images/google.png";
+import Facebook from "@/app/_images/facebook.png";
 import { useRouter } from "next/navigation";
 import {useCreateUserWithEmailAndPassword} from 'react-firebase-hooks/auth'
-import {auth} from '../firebase/config'
+import {auth} from '@/app/_firebase/config'
 
 export default function Signup() {
   const router = useRouter();

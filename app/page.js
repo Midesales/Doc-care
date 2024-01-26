@@ -1,16 +1,16 @@
 "use client";
 import Image from "next/image";
-import Man from "./images/boy.png";
-import Vector from "./images/Vector.png";
+import Man from "@/app/_images/boy.png";
+import Vector from "@/app/_images/Vector.png";
 import { useRouter } from "next/navigation";
 import Header from "./components/defaults/Header";
 import Footer from "./components/defaults/Footer";
 import Link from "next/link";
-import doctor1 from "./images/doctor1.png";
-import doctor2 from "./images/doctor2.png";
-import doctor3 from "./images/doctor3.png";
-import arrow from "./images/arrow.png";
-import unsplash from "./images/unsplash.png";
+import doctor1 from "@/app/_images/doctor1.png";
+import doctor2 from "@/app/_images/doctor2.png";
+import doctor3 from "@/app/_images/doctor3.png";
+import arrow from "@/app/_images/arrow.png";
+import unsplash from "@/app/_images/unsplash.png";
 
 export default function Home() {
   const router = useRouter();
