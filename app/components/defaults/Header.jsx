@@ -10,8 +10,8 @@ const Header = () => {
       <div className="space-x-16 lg:flex hidden">
         <Link href="/" className="hover:text-[#3aaba9] hover:font-bold dark:text-white">Home</Link>
         <Link href="/find-a-doctor" className="hover:text-[#3aaba9] hover:font-bold dark:text-white">Find a Doctor</Link>
-        <Link href="/" className="hover:text-[#3aaba9] hover:font-bold dark:text-white">About Us</Link>
-        <Link href="/" className="hover:text-[#3aaba9] hover:font-bold dark:text-white">Contact Us</Link>
+        <Link href="/about" className="hover:text-[#3aaba9] hover:font-bold dark:text-white">About Us</Link>
+        <Link href="/contact" className="hover:text-[#3aaba9] hover:font-bold dark:text-white">Contact Us</Link>
       </div>
       <Link
         href="/signin"
