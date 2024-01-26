@@ -1,21 +1,21 @@
 "use client";
 import Image from "next/image";
-import Man from "@/app/_images/boy.png";
-import Vector from "@/app/_images/Vector.png";
+import Man from "./_images/boy.png";
+import Vector from "./_images/Vector.png";
 import { useRouter } from "next/navigation";
 import Header from "./components/defaults/Header";
 import Footer from "./components/defaults/Footer";
 import Link from "next/link";
-import doctor1 from "@/app/_images/doctor1.png";
-import doctor2 from "@/app/_images/doctor2.png";
-import doctor3 from "@/app/_images/doctor3.png";
-import arrow from "@/app/_images/arrow.png";
-import unsplash from "@/app/_images/unsplash.png";
+import doctor1 from "./_images/doctor1.png";
+import doctor2 from "./_images/doctor2.png";
+import doctor3 from "./_images/doctor3.png";
+import arrow from "./_images/arrow.png";
+import unsplash from "./_images/unsplash.png";
 
 export default function Home() {
   const router = useRouter();
   return (
-    <main className="  min-h-screen ">
+    <main className="  min-h-screen">
       <Header />
 
       <div className="bg-[#3AABA9] flex justify-evenly items-center">

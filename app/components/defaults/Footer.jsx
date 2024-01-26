@@ -1,6 +1,6 @@
 import React from "react";
 import { Email, Instagram, LinkedIn, Location, Phone } from "../svgs/Icons";
-import twitter from "@/app/_images/twitter.png";
+import twitter from "../../_images/twitter.png";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -33,7 +33,7 @@ const Footer = () => {
           <p className="font-semibold text-[20px]">Folow Us on</p>
           <div className="flex items-center gap-3 space-x-3">
             <Link href="https://twitter.com/ayoade_mide">
-              <Image src={twitter} alt="twitter" className="w-6"></Image>
+              <Image src={twitter} alt="twitter" className="w-14"></Image>
             </Link>
 
             <Link href="https://www.linkedin.com/in/adeagbo-ayomide/">

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { doctors } from "@/app/_constants/doctors";
+import { doctors } from "../../../_constants/doctors";
 
 const Doctors = () => {
   return (

@@ -1,17 +1,24 @@
+'use client'
+
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "@/app/_images/logo.png";
-
+import Logo from "../../_images/logo.png";
+import { usePathname } from 'next/navigation';
 
 const Header = () => {
+
+  const currentRoute = usePathname();
+  const linkStyle = 'text-black hover:text-[#3aaba9] font-bold dark:text-white';
+  const activeStyle = 'text-[#6BC0BF]  hover:text-[#19BCBA]  font-bold'
+
   return (
     <header className="flex justify-between items-center text-[#000] lg:pt-6 pt-3 lg:px-16 px-4 pb-2 bg-white ">
       <Image src={Logo} className="w-[4rem]" alt="img" />
       <div className="space-x-16 lg:flex hidden">
-        <Link href="/" className="hover:text-[#3aaba9] hover:font-bold dark:text-white">Home</Link>
-        <Link href="/find-a-doctor" className="hover:text-[#3aaba9] hover:font-bold dark:text-white">Find a Doctor</Link>
-        <Link href="/about" className="hover:text-[#3aaba9] hover:font-bold dark:text-white">About Us</Link>
-        <Link href="/contact" className="hover:text-[#3aaba9] hover:font-bold dark:text-white">Contact Us</Link>
+        <Link href="/"  className={currentRoute === '/' ? activeStyle : linkStyle}>Home</Link>
+        <Link href="/find-a-doctor" className={currentRoute === '/find-a-doctor' ? activeStyle : linkStyle}>Find a Doctor</Link>
+        <Link href="/about" className={currentRoute === '/about' ? activeStyle : linkStyle}>About Us</Link>
+        <Link href="/contact" className={currentRoute === '/contact' ? activeStyle : linkStyle}>Contact Us</Link>
       </div>
       <Link
         href="/signin"

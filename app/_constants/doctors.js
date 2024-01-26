@@ -1,7 +1,7 @@
-import DoctorTwo from "@/app/_images/doctor-02.png";
-import DoctorThree from "@/app/_images/doctor-03.png";
-import DoctorFour from "@/app/_images/doctor-04.png";
-import DoctorFive from "@/app/_images/doctor-05.png";
+import DoctorTwo from "../_images/doctor-02.png";
+import DoctorThree from "../_images/doctor-03.png";
+import DoctorFour from "../_images/doctor-04.png";
+import DoctorFive from "../_images/doctor-05.png";
 
 /**
  * @type {Array.<{

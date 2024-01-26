@@ -2,45 +2,44 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Logo from "@/app/_images/logo.png";
-import Apple from "@/app/_images/apple.png";
-import Google from "@/app/_images/google.png";
-import Facebook from "@/app/_images/facebook.png";
+import Logo from "../_images/logo.png";
+import Apple from "../_images/apple.png";
+import Google from "../_images/google.png";
+import Facebook from "../_images/facebook.png";
 import { useRouter } from "next/navigation";
-import {useSignInWithEmailAndPassword} from 'react-firebase-hooks/auth'
-import { auth } from "@/app/_firebase/config";
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { auth } from "../_firebase/config";
 
 export default function Signin() {
   const router = useRouter();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const[SignInWithEmailAndPassword] = useSignInWithEmailAndPassword(auth)
-  const [error, setError] = useState(false)
+  const [SignInWithEmailAndPassword] = useSignInWithEmailAndPassword(auth);
+  const [error, setError] = useState(false);
 
   const handleSignin = async () => {
     try {
       // Check if any of the required fields is empty
       if (!email || !password) {
         console.error("Please fill in all the details.");
-        setError(true)
+        setError(true);
         setTimeout(() => {
           setError(false);
         }, 2000);
-        
+
         return;
       }
-  
-      const res = await SignInWithEmailAndPassword(email, password)
-      console.log(res)
+
+      const res = await SignInWithEmailAndPassword(email, password);
+      console.log(res);
       router.push("/find-a-doctor");
-      setEmail('');
-      setPassword('')
+      setEmail("");
+      setPassword("");
     } catch (error) {
       console.error("Signin failed:", error);
     }
   };
-  
 
   return (
     <main className=" relative min-h-screen flex justify-center items-center ">
@@ -52,8 +51,11 @@ export default function Signin() {
 
           <div className="px-14 w-96">
             <div>
-              {error && <p className="text-red-400 text-center">
-                Please fill in the details</p>}
+              {error && (
+                <p className="text-red-400 text-center">
+                  Please fill in the details
+                </p>
+              )}
             </div>
             <p className="text-[#3AABA9] font-semibold text-2xl flex items-center justify-center py-6">
               Sign In to Doc’care
@@ -64,14 +66,14 @@ export default function Signin() {
                 placeholder="username@gmail.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="text-[#B0A3A3] bg-[#D9D9D9] p-2 outline-none"
+                className=" bg-[#D9D9D9] p-2 outline-none"
               ></input>
               <input
                 type="password"
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className=" text-[#B0A3A3] bg-[#D9D9D9] p-2 outline-none"
+                className=" bg-[#D9D9D9] p-2 outline-none"
               ></input>
             </div>
             <div className="flex justify-center p-3">
@@ -95,10 +97,9 @@ export default function Signin() {
         </div>
 
         <div className="bg-[#3AABA9] border border-[#3AABA9] text-white flex flex-col justify-center items-center gap-3 px-8 ">
-          <p className="text-2xl font-semibold">Welcome back!</p>
+          <p className="text-sm lg:text-2xl font-semibold">Welcome back!</p>
           <div className="text-xs text-center">
-            <p>Enter your login details to continue </p>
-            <p> to book an appointment.</p>
+            <p>Enter your login details to continue to book an appointment.</p>
           </div>
 
           <p className="text-xs py-3">Don’t have an account?</p>
