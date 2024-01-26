@@ -1,10 +1,10 @@
 import React from "react";
-import Pregnancy from "../../../images/pregnancy.png";
-import EyeCare from "../../../images/eyecare.png";
-import CheckUp from "../../../images/checkup.png";
-import Pediatrics from "../../../images/pediatrics.png";
-import LabTest from "../../../images/labtest.png";
-import Xray from "../../../images/xray.png";
+import Pregnancy from "@/app/_images/pregnancy.png";
+import EyeCare from "@/app/_images/eyecare.png";
+import CheckUp from "@/app/_images/checkup.png";
+import Pediatrics from "@/app/_images/pediatrics.png";
+import LabTest from "@/app/_images/labtest.png";
+import Xray from "@/app/_images/xray.png";
 
 const Departments = () => {
   const departments = [
