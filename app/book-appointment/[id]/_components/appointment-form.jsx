@@ -1,9 +1,10 @@
 'use client';
 
-import { memo, useState } from 'react';
+import React, { memo, useState } from 'react';
 import ActionBadge from "./action-badge";
 import useUpcomingDates from "../_hooks/use-upcoming-dates";
-import Button from "@/app/components/defaults/Button";
+import Button from "../../../components/defaults/Button";
+import SuccessAlert from "./SucessAlert";
 
 const intervals = [
   '12:00 - 12:30 pm',
@@ -21,9 +22,18 @@ const intervals = [
 ];
 
 const AppointmentForm = memo(({ doctor }) => {
+  const [isSuccess, setIsSuccess] = useState(false);
   const next10Dates = useUpcomingDates();
   const [selectedDate, setSelectedDate] = useState(next10Dates[0]);
   const [selectedInterval, setSelectedInterval] = useState(intervals[0]);
+
+  const submit = () => {
+    setIsSuccess(true);
+  }
+
+  if (isSuccess) {
+    return <SuccessAlert/>;
+  }
 
   return <form className="space-y-12">
     <h1 className="font-bold text-2xl">Choose a date & time to visit</h1>
@@ -50,9 +60,14 @@ const AppointmentForm = memo(({ doctor }) => {
           </ActionBadge>
         ))}
       </div>
-      <Button>Book appointment with <span className="text-white">{doctor.name}</span></Button>
+      <Button onClick={submit}>
+        Book appointment with <span className="text-white">{doctor.name}</span>
+      </Button>
     </div>
   </form>
 });
+
+
+AppointmentForm.displayName = 'AppointmentForm';
 
 export default AppointmentForm;

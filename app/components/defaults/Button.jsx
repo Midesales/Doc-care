@@ -13,4 +13,6 @@ const Button = memo(({ children, ...props }) => {
   );
 });
 
+Button.displayName = 'Button';
+
 export default Button;

@@ -24,7 +24,7 @@ const Header = () => {
         href="/signin"
         className="border rounded-xl text-white bg-[#3AABA9] px-4 py-2"
       >
-        Book An Appointment
+        Sign in
       </Link>
     </header>
   );
