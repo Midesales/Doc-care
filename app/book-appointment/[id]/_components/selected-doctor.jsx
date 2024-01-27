@@ -1,5 +1,5 @@
 import { memo } from "react";
-import StarRating from "@/app/components/defaults/StarRating";
+import StarRating from "../../../components/defaults/StarRating";
 import DoctorMetric from "./doctor-metric";
 import Image from "next/image";
 
