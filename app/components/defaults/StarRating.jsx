@@ -17,4 +17,6 @@ const StarRating = memo(({ score }) => {
   )
 });
 
+StarRating.displayName = 'StarRating';
+
 export default StarRating;

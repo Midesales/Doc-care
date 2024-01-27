@@ -17,4 +17,6 @@ const ActionBadge = memo(({ children, className, onClick, isSelected }) => {
   )
 });
 
+ActionBadge.displayName = 'ActionBadge';
+
 export default ActionBadge;

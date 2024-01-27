@@ -20,6 +20,8 @@ const Doctor = memo(({ doctor }) => {
       </div>
     </div>
   );
-})
+});
+
+Doctor.displayName = 'Doctor';
 
 export default Doctor;

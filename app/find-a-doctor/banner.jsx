@@ -35,4 +35,6 @@ const Banner = memo(() => {
   );
 });
 
+Banner.displayName = 'Banner';
+
 export default Banner;

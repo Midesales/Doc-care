@@ -18,4 +18,6 @@ const BackButton = memo(() => {
   </button>
 });
 
+BackButton.displayName = 'BackButton';
+
 export default BackButton;

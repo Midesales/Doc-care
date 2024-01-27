@@ -11,4 +11,6 @@ const SuccessAlert = memo(() => {
   );
 });
 
+SuccessAlert.displayName = 'SuccessAlert'
+
 export default SuccessAlert;

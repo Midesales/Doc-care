@@ -10,4 +10,6 @@ const Badge = memo(({ className, children }) => {
   </section>
 });
 
+Badge.displayName = 'Badge';
+
 export default Badge;

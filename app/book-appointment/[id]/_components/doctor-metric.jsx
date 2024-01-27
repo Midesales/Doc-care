@@ -8,4 +8,6 @@ const DoctorMetric = memo(({ value, children }) => {
   </Badge>
 });
 
+DoctorMetric.displayName = 'DoctorMetric';
+
 export default DoctorMetric;

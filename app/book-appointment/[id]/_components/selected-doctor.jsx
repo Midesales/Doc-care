@@ -20,4 +20,6 @@ const SelectedDoctor = memo(({doctor}) => {
   )
 });
 
+SelectedDoctor.displayName = 'SelectedDoctor';
+
 export default SelectedDoctor;

@@ -67,4 +67,7 @@ const AppointmentForm = memo(({ doctor }) => {
   </form>
 });
 
+
+AppointmentForm.displayName = 'AppointmentForm';
+
 export default AppointmentForm;
