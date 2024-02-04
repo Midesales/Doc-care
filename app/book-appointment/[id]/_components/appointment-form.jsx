@@ -1,10 +1,11 @@
 'use client';
 
-import React, { memo, useState } from 'react';
+import React, {memo, useState} from 'react';
 import ActionBadge from "./action-badge";
 import useUpcomingDates from "../_hooks/use-upcoming-dates";
 import Button from "../../../components/defaults/Button";
 import SuccessAlert from "./SucessAlert";
+import useAppointmentMutation from "../_hooks/use-appointment-mutation";
 
 const intervals = [
   '12:00 - 12:30 pm',
@@ -21,17 +22,18 @@ const intervals = [
   '05:30 - 06:00 pm',
 ];
 
-const AppointmentForm = memo(({ doctor }) => {
-  const [isSuccess, setIsSuccess] = useState(false);
+const AppointmentForm = memo(({doctor}) => {
   const next10Dates = useUpcomingDates();
   const [selectedDate, setSelectedDate] = useState(next10Dates[0]);
   const [selectedInterval, setSelectedInterval] = useState(intervals[0]);
+  const mutation = useAppointmentMutation();
 
-  const submit = () => {
-    setIsSuccess(true);
+  const submit = async (e) => {
+    e.preventDefault();
+    await mutation.mutateAsync({doctor, selectedDate, selectedInterval});
   }
 
-  if (isSuccess) {
+  if (mutation.isSuccess) {
     return <SuccessAlert/>;
   }
 
@@ -45,7 +47,7 @@ const AppointmentForm = memo(({ doctor }) => {
                        onClick={() => setSelectedDate(date)}>
             <h1 className="font-bold text-xl">{date.getDate()}</h1>
             <h2 className='font-medium text-lg text-[#9E9E9E]'>
-              {date.toLocaleString('default', { month: 'short' })}
+              {date.toLocaleString('default', {month: 'short'})}
             </h2>
           </ActionBadge>
         ))}
@@ -60,13 +62,12 @@ const AppointmentForm = memo(({ doctor }) => {
           </ActionBadge>
         ))}
       </div>
-      <Button onClick={submit}>
+      <Button onClick={submit} type="submit" disabled={mutation.isPending}>
         Book appointment with <span className="text-white">{doctor.name}</span>
       </Button>
     </div>
   </form>
 });
-
 
 AppointmentForm.displayName = 'AppointmentForm';
 

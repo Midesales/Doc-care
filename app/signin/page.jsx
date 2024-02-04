@@ -9,10 +9,11 @@ import Facebook from "../_images/facebook.png";
 import { useRouter } from "next/navigation";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { auth } from "../_firebase/config";
+import {useQueryClient} from "@tanstack/react-query";
 
 export default function Signin() {
   const router = useRouter();
-
+  const queryClient = useQueryClient();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [SignInWithEmailAndPassword] = useSignInWithEmailAndPassword(auth);
@@ -31,8 +32,9 @@ export default function Signin() {
         return;
       }
 
-      const res = await SignInWithEmailAndPassword(email, password);
-      console.log(res);
+      const {user} = await SignInWithEmailAndPassword(email, password);
+      console.log({user});
+      sessionStorage.setItem('user', JSON.stringify(user))
       router.push("/find-a-doctor");
       setEmail("");
       setPassword("");
