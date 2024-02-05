@@ -16,7 +16,7 @@ export default function Signin() {
   const queryClient = useQueryClient();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [SignInWithEmailAndPassword] = useSignInWithEmailAndPassword(auth);
+  // const [SignInWithEmailAndPassword] = useSignInWithEmailAndPassword(auth);
   const [error, setError] = useState(false);
 
   const handleSignin = async () => {
@@ -98,7 +98,7 @@ export default function Signin() {
           </div>
         </div>
 
-        <div className="bg-[#3AABA9] border border-[#3AABA9] text-white flex flex-col justify-center items-center gap-3 px-8 ">
+        <div className="bg-[#3AABA9] hidden md:flex border border-[#3AABA9] text-white flex flex-col justify-center items-center gap-3 px-8 ">
           <p className="text-sm lg:text-2xl font-semibold">Welcome back!</p>
           <div className="text-xs text-center">
             <p>Enter your login details to continue to book an appointment.</p>
