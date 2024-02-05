@@ -18,7 +18,7 @@ export default function Home() {
     <main className="  min-h-screen">
       <Header />
 
-      <div className="bg-[#3AABA9] flex justify-evenly items-center">
+      <div className="bg-[#3AABA9] flex flex-col md:flex-row justify-evenly items-center">
         <div className="text-white text-center pt-8 pb-28 flex flex-col p-4 ">
           <div className="text-3xl lg:hidden  font-bold">
             <p className="pb-2">Book Your Doctor Appointment Online</p>
@@ -121,14 +121,14 @@ export default function Home() {
           <Image src={unsplash} alt="man-two" className="w-[40rem]" />
           <div className="flex flex-col items-center lg:items-start p-10 gap-6 ">
             <h3 className="text-[#3AABA9]  text-xl">About Us</h3>
-            <h4 className="text-lg lg:text-6xl font-bold">
+            <h4 className="text-lg lg:text-6xl font-bold text-center md:text-left">
               Your Health, <br></br> Our Commitment
             </h4>
             <div>
-              <p className="text-center text-[12px] md:text-sm lg:text-lg font-semibold">
+              <p className="text-center md:text-left text-[12px] md:text-sm lg:text-lg font-semibold">
                 Welcome to a healthcare experience designed for you.
               </p>
-              <p className="text-center text-[12px] md:text-sm lg:text-lg font-semibold">
+              <p className="text-center md:text-left text-[12px] md:text-sm lg:text-lg font-semibold">
                 Our simplifies the path to wellness, connecting you seamlessly
                 with expert care.
               </p>
